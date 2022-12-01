@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Meal Printer (Continued)</name>
+  <packageId>Mlie.MealPrinter</packageId>
+  <author>SomewhereOutInSpace</author>
+  <url>https://github.com/emipa606/MealPrinter</url>
+  <supportedVersions>
+    <li>1.2</li>
+    <li>1.3</li>
+    <li>1.4</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+  </loadAfter>
+  <description>[img]https://i.imgur.com/buuPQel.png[/img]
+Update of SomewhereOutInSpaces mod
+https://steamcommunity.com/sharedfiles/filedetails/?id=2552068105
+
+[img]https://i.imgur.com/pufA0kM.png[/img]
+
+[table]
+    [tr]
+        [td][url=https://invite.gg/Mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td]
+        [td][url=https://github.com/emipa606/MealPrinter][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
+    [/tr]
+    [tr]
+        [td][img]https://i.imgur.com/WjDSfUn.png[/img][/td]
+        [td][img]https://i.imgur.com/Be8E2qJ.png[/img][/td]
+    [/tr]
+[/table]
+	
+[img]https://i.imgur.com/Z4GOv8H.png[/img]
+[h1]Meal Printer - simple, balanced automated meal production for Rimworld's mid-to-late game![/h1]
+
+[img=https://imgur.com/iFBTYeT.gif]
+
+Meal Printer adds the titular meal printers. These are the spacer-tech evolution of nutrient paste dispensers, using protein resequencing and primitive molecular printing to convert raw foodstuffs into filling, wholesome meals.
+
+[h1]Features:[/h1]
+[list]
+[*] [b]The meal printer building[/b]. Acting as an advanced drop-in upgrade to the nutrient paste dispenser, printers default to converting hoppered foodstuffs into simple meals - say goodbye to the paste mood debuff without having to chain one of your colonists to a stove! Researchable upgrades can also unlock fine meals and high-efficiency nutrient paste for printing.
+[*] [b]NutriBars[/b]. A spacer-tech compromise between neolithic pemmican and industrial packaged survival meals, designed specifically to be mass-produced by meal printers. Lightweight, energy dense and inoffensively flavored, one NutriBar is just as filling as a traditional meal and lasts several seasons without refrigeration. Once unlocked via research project, your printers can produce these in bulk - great for emergency supplies or provisioning caravans.
+[/list]
+
+[h1]Details:[/h1]
+[list]
+[*] Meal printers are unlocked through the Meal Printing research project, which requires Nutrient Paste and Fabrication research.
+[*] A meal printer costs 75 plasteel, 25 steel and 3 advanced components. Once built, it requires 1000W of power, and functions as a drop-in paste dispenser upgrade.
+[*] A printer's desired output meal can be set on its toolbar. To start only simple meals are available; more options can be unlocked through research.
+[list]
+[*][b]Simple meals[/b] have no exceptional benefits or downsides. They print with identical nutrient efficiency to cooking them manually.
+[*][b]Fine meals[/b] will give a mood buff, but have a disgustingly poor print efficiency - equivalent to lavish meals. 
+[*][b]High-efficiency nutrient paste[/b] will consume even less raw food per meal than a paste dispenser, but you'll have to deal with the paste meal mood debuff.
+[/list]
+[*] Colonists will not use a printer if its set meal type is forbidden by their food policy.
+[*] Once researched, NutriBars can be printed in bulk from a printer's toolbar. You can print up to 30 in one go, and each bar costs the same amount of nutrition as a simple meal - 0.5, or 10 units of most foodstuffs like rice. Bars last 75 days without refrigeration and are just as filling as a normal meal.
+[/list]
+
+[h1]FAQ:[/h1]
+[list]
+[*] [i][b]"Isn't this a lot like [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1715402900]Replimat[/url]?"[/b][/i] Yes! I even used some code from Replimat to ease the process of patching the printer into the game's existing nutrient paste workflow. However, Replimat is a great mod, but it's balanced heavily towards the very "I don't wanna leave the planet" end game of Rimworld. Meal Printer is a cheaper and simpler alternative for Rimworld's mid-to-late game.
+[*] [i][b]"Why add NutriBars instead of just using packaged survival meals?"[/b][/i] Primarily because PSMs have a market value of $24, meaning it'd be [i]very[/i] easy to churn them out as silver fodder if you could just print them. I could have gone with pemmican, but I wanted something that was "one unit = one meal," so I met in the middle and made NutriBars. (They have a market value of $5, if you were wondering.)
+[/list]
+
+[h1]Known issues:[/h1]
+[list]
+[*][b]CURRENTLY NOT COMPATIBLE WITH [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2426119067]Animal Controls[/url]. Nothing I can do about this AFAIK, only the author can fix his patch.[/b]
+[*]When looking for a meal, colonists may rarely pick raw food over using the printer. This appears to either be a vanilla bug with food dispensers or a third-party mod conflict, since the same problem happens with regular paste dispensers w/o this mod installed. Forbidding raw food in your colonist's food policies will prevent it, but there's nothing I can do to fix it.
+[/list]
+
+[h1]Other stuff:[/h1]
+[list]
+[*] Github link for non-Steam players is [url=https://github.com/SomewhereOutInSpace/Rimworld-Mod-Archive]here.[/url]
+[*] Meal Printer should be safe to add to an existing save. You can also remove it mid-save, but deconstruct any printers and get rid of any NutriBars first.
+[*] Don't hesitate to leave a comment if you run into a bug, but PLEASE include any relevant information from the debug log if you do so.
+[*] Other supported languages: 
+[list]
+[*]Korean translation done by the wonderful isty2e on Github!
+[*]Simplified Chinese translation done by the wonderful IssacZhan on Github!
+[/list]
+[*] [b]If you enjoy Meal Printer, be sure to give it a favorite and a thumbs-up so the Workshop algorithm gives it some time in the limelight![/b]
+[*] Oh, and - if you enjoy my mods, consider buying me a coffee on Kofi :) I'll use the money to help me make better mods!
+[/list]
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀[url=https://ko-fi.com/D1D76XTFO] [img]https://cdn.ko-fi.com/cdn/kofi2.png[/img] [/url]
+
+[h1]Attributions:[/h1]
+As required per [url=https://github.com/sumghai/Replimat/blob/master/LICENSE.md]license[/url] (CC BY-SA 4.0), Meal Printer uses Harmony and UI code from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1715402900]Replimat[/url] by Robin "sumghai" Chang and Dubwise. Your code made my life so much easier - thank you!
+	
+[img]https://i.imgur.com/PwoNOj4.png[/img]
+[list]
+[*] See if the the error persists if you just have this mod and its requirements active.
+[*] If not, try adding your other mods until it happens again.
+[*] Post your error-log using [url=https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib[/url] and command Ctrl+F12
+[*] For best support, please use the Discord-channel for error-reporting.
+[*] Do not report errors by making a discussion-thread, I get no notification of that.
+[*] If you have the solution for a problem, please post it to the GitHub repository.
+[/list]</description>
+</ModMetaData>
