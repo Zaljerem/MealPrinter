@@ -19,6 +19,7 @@ public static class Harmony_ThingListGroupHelper_Includes
         }
 
         __result = true;
+
         return false;
     }
 }

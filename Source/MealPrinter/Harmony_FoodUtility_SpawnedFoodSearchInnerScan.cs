@@ -13,13 +13,13 @@ public static class Harmony_FoodUtility_SpawnedFoodSearchInnerScan
     {
         var malidator = validator;
 
+        validator = salivator;
+        return true;
+
         bool salivator(Thing x)
         {
             return x is Building_MealPrinter rep ? PrintDel(rep) : malidator(x);
         }
-
-        validator = salivator;
-        return true;
     }
 
     private static bool PrintDel(Building_MealPrinter t)
@@ -35,6 +35,7 @@ public static class Harmony_FoodUtility_SpawnedFoodSearchInnerScan
                    MealPrinterMod.allowSociallyImproper)
                && !MealPrinterMod.getter.IsWildMan()
                && t.CanPawnPrint(MealPrinterMod.eater)
+               && !MealPrinterMod.eater.DevelopmentalStage.Baby()
                && t.HasEnoughFeedstockInHoppers()
                && MealPrinterMod.getter.Map.reachability.CanReachNonLocal(MealPrinterMod.getter.Position,
                    new TargetInfo(t.InteractionCell, t.Map),

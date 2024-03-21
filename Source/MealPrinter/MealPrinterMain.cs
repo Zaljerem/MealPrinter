@@ -14,9 +14,14 @@ public static class MealPrinterMain
         new Harmony("MealPrinter").PatchAll(Assembly.GetExecutingAssembly());
     }
 
-    //the method was private so i just copy pasted that bitch
+    //the method was private, so I just copied and pasted that bitch
     public static bool IsFoodSourceOnMapSociallyProper(Thing t, Pawn getter, Pawn eater, bool allowSociallyImproper)
     {
+        if (eater.DevelopmentalStage.Baby())
+        {
+            return false;
+        }
+
         if (allowSociallyImproper)
         {
             return true;

@@ -67,7 +67,6 @@ Meal Printer adds the titular meal printers. These are the spacer-tech evolution
 
 
 
--  Github link for non-Steam players is https://github.com/SomewhereOutInSpace/Rimworld-Mod-Archive]here.
 -  Meal Printer should be safe to add to an existing save. You can also remove it mid-save, but deconstruct any printers and get rid of any NutriBars first.
 -  Don't hesitate to leave a comment if you run into a bug, but PLEASE include any relevant information from the debug log if you do so.
 -  Other supported languages: 
@@ -78,11 +77,8 @@ Meal Printer adds the titular meal printers. These are the spacer-tech evolution
 
 
 -  **If you enjoy Meal Printer, be sure to give it a favorite and a thumbs-up so the Workshop algorithm gives it some time in the limelight!**
--  Oh, and - if you enjoy my mods, consider buying me a coffee on Kofi :) I'll use the money to help me make better mods!
 
 
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀https://ko-fi.com/D1D76XTFO] ![Image](https://cdn.ko-fi.com/cdn/kofi2.png)
- 
 
 # Attributions:
 
@@ -94,9 +90,13 @@ As required per https://github.com/sumghai/Replimat/blob/master/LICENSE.md]licen
 
 -  See if the the error persists if you just have this mod and its requirements active.
 -  If not, try adding your other mods until it happens again.
--  Post your error-log using https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib and command Ctrl+F12
+-  Post your error-log using https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib or the standalone https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404]Uploader and command Ctrl+F12
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
+-  Use https://github.com/RimSort/RimSort/releases/latest]RimSort to sort your mods
 
+
+
+https://steamcommunity.com/sharedfiles/filedetails/changelog/2896093930]![Image](https://img.shields.io/github/v/release/emipa606/MealPrinter?label=latest%20version&style=plastic&color=9f1111&labelColor=black)
 

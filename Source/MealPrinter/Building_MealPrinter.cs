@@ -11,7 +11,7 @@ public class Building_MealPrinter : Building_NutrientPasteDispenser
 {
     private const float barNutritionCost = 0.5f;
 
-    public static readonly List<ThingDef> validMeals = new List<ThingDef>();
+    public static readonly List<ThingDef> validMeals = [];
     private ThingDef mealToPrint;
 
     public override void PostMake()
@@ -90,7 +90,7 @@ public class Building_MealPrinter : Building_NutrientPasteDispenser
                 {
                     defaultLabel = "ButtonBulkPrintBars".Translate(),
                     defaultDesc = "ButtonBulkPrintBarsDescNoPower".Translate(),
-                    disabled = true,
+                    Disabled = true,
                     icon = ContentFinder<Texture2D>.Get("UI/Buttons/NutriBar"),
                     Order = -100,
                     action = TryBulkPrintBars
@@ -114,7 +114,7 @@ public class Building_MealPrinter : Building_NutrientPasteDispenser
             {
                 defaultLabel = "ButtonBulkPrintBars".Translate(),
                 defaultDesc = "ButtonBulkPrintBarsDescNoResearch".Translate(),
-                disabled = true,
+                Disabled = true,
                 icon = ContentFinder<Texture2D>.Get("UI/Buttons/NutriBar"),
                 Order = -100,
                 action = TryBulkPrintBars
@@ -252,14 +252,15 @@ public class Building_MealPrinter : Building_NutrientPasteDispenser
             maxPossibleBars = 30;
         }
 
+        var window = new Dialog_PrintBars(TextGetter, 1, maxPossibleBars,
+            delegate(int x, bool forbidden, bool rear) { ConfirmAction(x, feedStock, forbidden, rear); }, 1);
+        Find.WindowStack.Add(window);
+        return;
+
         string TextGetter(int x)
         {
             return "SetBarBatchSize".Translate(x, maxAllowedBars);
         }
-
-        var window = new Dialog_PrintBars(TextGetter, 1, maxPossibleBars,
-            delegate(int x, bool forbidden, bool rear) { ConfirmAction(x, feedStock, forbidden, rear); }, 1);
-        Find.WindowStack.Add(window);
     }
 
     //Bulk bar printing action
@@ -366,7 +367,7 @@ public class Building_MealPrinter : Building_NutrientPasteDispenser
     //Check if pawn's food restrictions allow consumption of the set meal
     public bool CanPawnPrint(Pawn p)
     {
-        return p.foodRestriction.CurrentFoodRestriction.Allows(mealToPrint);
+        return p.foodRestriction.CurrentFoodPolicy.Allows(mealToPrint);
     }
 
     //Plays print sound according to settings
@@ -382,7 +383,7 @@ public class Building_MealPrinter : Building_NutrientPasteDispenser
     {
         //0 1 2 3
         //facing up right down left
-        //this has got to be the stupidest fucking possible means of getting this information and i do not care
+        //this has got to be the stupidest fucking possible means of getting this information and I do not care
 
         var rot = Rotation.ToString();
         switch (rot)

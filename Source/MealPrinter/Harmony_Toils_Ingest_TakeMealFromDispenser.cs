@@ -15,6 +15,11 @@ public static class Harmony_Toils_Ingest_TakeMealFromDispenser
             return true;
         }
 
+        if (eater.DevelopmentalStage.Baby())
+        {
+            return true;
+        }
+
         var windex = ind;
         var toil = new Toil();
         toil.initAction = delegate
