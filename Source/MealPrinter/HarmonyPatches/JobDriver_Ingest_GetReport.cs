@@ -2,10 +2,10 @@
 using RimWorld;
 using Verse.AI;
 
-namespace MealPrinter;
+namespace MealPrinter.HarmonyPatches;
 
 [HarmonyPatch(typeof(JobDriver_Ingest), nameof(JobDriver_Ingest.GetReport))]
-public static class Harmony_JobDriver_Ingest_GetReport
+public static class JobDriver_Ingest_GetReport
 {
     private static void Postfix(JobDriver_Ingest __instance, ref string __result)
     {

@@ -14,6 +14,9 @@ public static class MealPrinterMain
         new Harmony("MealPrinter").PatchAll(Assembly.GetExecutingAssembly());
     }
 
+    public static ThingDef InsectJelly => ThingDef.Named("InsectJelly");
+    public static ThingDef Milk => ThingDef.Named("Milk");
+
     //the method was private, so I just copied and pasted that bitch
     public static bool IsFoodSourceOnMapSociallyProper(Thing t, Pawn getter, Pawn eater, bool allowSociallyImproper)
     {

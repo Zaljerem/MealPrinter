@@ -2,10 +2,10 @@
 using RimWorld;
 using Verse;
 
-namespace MealPrinter;
+namespace MealPrinter.HarmonyPatches;
 
 [HarmonyPatch(typeof(FoodUtility), nameof(FoodUtility.GetFinalIngestibleDef))]
-public static class Harmony_FoodUtility_GetFinalIngestibleDef
+public static class FoodUtility_GetFinalIngestibleDef
 {
     private static bool Prefix(ref Thing foodSource, ref ThingDef __result)
     {

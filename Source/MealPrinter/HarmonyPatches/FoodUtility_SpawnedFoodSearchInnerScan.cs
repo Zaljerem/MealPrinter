@@ -4,12 +4,12 @@ using RimWorld;
 using Verse;
 using Verse.AI;
 
-namespace MealPrinter;
+namespace MealPrinter.HarmonyPatches;
 
 [HarmonyPatch(typeof(FoodUtility), "SpawnedFoodSearchInnerScan", null)]
-public static class Harmony_FoodUtility_SpawnedFoodSearchInnerScan
+public static class FoodUtility_SpawnedFoodSearchInnerScan
 {
-    private static bool Prefix(ref Predicate<Thing> validator)
+    public static bool Prefix(ref Predicate<Thing> validator)
     {
         var malidator = validator;
 

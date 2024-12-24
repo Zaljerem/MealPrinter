@@ -2,10 +2,10 @@
 using RimWorld;
 using Verse;
 
-namespace MealPrinter;
+namespace MealPrinter.HarmonyPatches;
 
 [HarmonyPatch(typeof(FoodUtility), nameof(FoodUtility.BestFoodSourceOnMap))]
-public static class Harmony_FoodUtility_BestFoodSourceOnMap
+public static class FoodUtility_BestFoodSourceOnMap
 {
     private static void Prefix(ref Pawn getter, ref Pawn eater, ref bool allowDispenserFull,
         ref bool allowForbidden, ref bool allowSociallyImproper)

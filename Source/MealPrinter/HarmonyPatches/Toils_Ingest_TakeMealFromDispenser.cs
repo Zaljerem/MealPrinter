@@ -3,10 +3,10 @@ using RimWorld;
 using Verse;
 using Verse.AI;
 
-namespace MealPrinter;
+namespace MealPrinter.HarmonyPatches;
 
 [HarmonyPatch(typeof(Toils_Ingest), nameof(Toils_Ingest.TakeMealFromDispenser))]
-public static class Harmony_Toils_Ingest_TakeMealFromDispenser
+public static class Toils_Ingest_TakeMealFromDispenser
 {
     private static bool Prefix(ref TargetIndex ind, ref Pawn eater, ref Toil __result)
     {
@@ -27,12 +27,6 @@ public static class Harmony_Toils_Ingest_TakeMealFromDispenser
             var actor = toil.actor;
             var curJob = actor.jobs.curJob;
             var printer = (Building_MealPrinter)curJob.GetTarget(windex).Thing;
-
-            var PawnForMealScan = actor;
-            if (curJob.GetTarget(TargetIndex.B).Thing is Pawn p)
-            {
-                PawnForMealScan = p;
-            }
 
             var thing = printer.TryDispenseFood();
             if (thing == null)

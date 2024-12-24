@@ -1,10 +1,10 @@
 ﻿using HarmonyLib;
 using Verse;
 
-namespace MealPrinter;
+namespace MealPrinter.HarmonyPatches;
 
 [HarmonyPatch(typeof(ThingListGroupHelper), nameof(ThingListGroupHelper.Includes))]
-public static class Harmony_ThingListGroupHelper_Includes
+public static class ThingListGroupHelper_Includes
 {
     private static bool Prefix(ref ThingRequestGroup group, ref ThingDef def, ref bool __result)
     {

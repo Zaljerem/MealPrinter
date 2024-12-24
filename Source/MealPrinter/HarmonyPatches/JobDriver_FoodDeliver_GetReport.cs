@@ -6,7 +6,7 @@ using Verse.AI;
 namespace MealPrinter;
 
 [HarmonyPatch(typeof(JobDriver_FoodDeliver), nameof(JobDriver_FoodDeliver.GetReport))]
-public static class Harmony_JobDriver_FoodDeliver_GetReport
+public static class JobDriver_FoodDeliver_GetReport
 {
     private static void Postfix(JobDriver_FoodDeliver __instance, ref string __result)
     {

@@ -3,10 +3,10 @@ using RimWorld;
 using Verse;
 using Verse.AI;
 
-namespace MealPrinter;
+namespace MealPrinter.HarmonyPatches;
 
 [HarmonyPatch(typeof(JobDriver_FoodFeedPatient), nameof(JobDriver_FoodFeedPatient.GetReport))]
-public static class Harmony_JobDriver_FoodFeedPatient_GetReport
+public static class JobDriver_FoodFeedPatient_GetReport
 {
     private static void Postfix(JobDriver_FoodFeedPatient __instance, ref string __result)
     {

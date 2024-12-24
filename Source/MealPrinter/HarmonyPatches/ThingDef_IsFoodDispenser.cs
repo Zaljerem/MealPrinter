@@ -1,10 +1,10 @@
 ﻿using HarmonyLib;
 using Verse;
 
-namespace MealPrinter;
+namespace MealPrinter.HarmonyPatches;
 
 [HarmonyPatch(typeof(ThingDef), nameof(ThingDef.IsFoodDispenser), MethodType.Getter)]
-public static class Harmony_ThingDef_IsFoodDispenser
+public static class ThingDef_IsFoodDispenser
 {
     // stop need hoppers alert
 

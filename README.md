@@ -1,4 +1,4 @@
-# MealPrinter
+# [Meal Printer (Continued)](https://steamcommunity.com/sharedfiles/filedetails/?id=2896093930)
 
 ![Image](https://i.imgur.com/buuPQel.png)
 
@@ -6,7 +6,6 @@ Update of SomewhereOutInSpaces mod
 https://steamcommunity.com/sharedfiles/filedetails/?id=2552068105
 
 ![Image](https://i.imgur.com/pufA0kM.png)
-
 	
 ![Image](https://i.imgur.com/Z4GOv8H.png)
 
@@ -49,7 +48,7 @@ Meal Printer adds the titular meal printers. These are the spacer-tech evolution
 
 
 
--  ***"Isn't this a lot like https://steamcommunity.com/sharedfiles/filedetails/?id=1715402900]Replimat?"*** Yes! I even used some code from Replimat to ease the process of patching the printer into the game's existing nutrient paste workflow. However, Replimat is a great mod, but it's balanced heavily towards the very "I don't wanna leave the planet" end game of Rimworld. Meal Printer is a cheaper and simpler alternative for Rimworld's mid-to-late game.
+-  ***"Isn't this a lot like [Replimat](https://steamcommunity.com/sharedfiles/filedetails/?id=1715402900)?"*** Yes! I even used some code from Replimat to ease the process of patching the printer into the game's existing nutrient paste workflow. However, Replimat is a great mod, but it's balanced heavily towards the very "I don't wanna leave the planet" end game of Rimworld. Meal Printer is a cheaper and simpler alternative for Rimworld's mid-to-late game.
 -  ***"Why add NutriBars instead of just using packaged survival meals?"*** Primarily because PSMs have a market value of $24, meaning it'd be *very* easy to churn them out as silver fodder if you could just print them. I could have gone with pemmican, but I wanted something that was "one unit = one meal," so I met in the middle and made NutriBars. (They have a market value of $5, if you were wondering.)
 
 
@@ -58,7 +57,7 @@ Meal Printer adds the titular meal printers. These are the spacer-tech evolution
 
 
 
-- **CURRENTLY NOT COMPATIBLE WITH https://steamcommunity.com/sharedfiles/filedetails/?id=2426119067]Animal Controls. Nothing I can do about this AFAIK, only the author can fix his patch.**
+- **CURRENTLY NOT COMPATIBLE WITH [Animal Controls](https://steamcommunity.com/sharedfiles/filedetails/?id=2426119067). Nothing I can do about this AFAIK, only the author can fix his patch.**
 - When looking for a meal, colonists may rarely pick raw food over using the printer. This appears to either be a vanilla bug with food dispensers or a third-party mod conflict, since the same problem happens with regular paste dispensers w/o this mod installed. Forbidding raw food in your colonist's food policies will prevent it, but there's nothing I can do to fix it.
 
 
@@ -82,7 +81,7 @@ Meal Printer adds the titular meal printers. These are the spacer-tech evolution
 
 # Attributions:
 
-As required per https://github.com/sumghai/Replimat/blob/master/LICENSE.md]license (CC BY-SA 4.0), Meal Printer uses Harmony and UI code from https://steamcommunity.com/sharedfiles/filedetails/?id=1715402900]Replimat by Robin "sumghai" Chang and Dubwise. Your code made my life so much easier - thank you!
+As required per [license](https://github.com/sumghai/Replimat/blob/master/LICENSE.md) (CC BY-SA 4.0), Meal Printer uses Harmony and UI code from [Replimat](https://steamcommunity.com/sharedfiles/filedetails/?id=1715402900) by Robin "sumghai" Chang and Dubwise. Your code made my life so much easier - thank you!
 	
 ![Image](https://i.imgur.com/PwoNOj4.png)
 
@@ -90,13 +89,12 @@ As required per https://github.com/sumghai/Replimat/blob/master/LICENSE.md]licen
 
 -  See if the the error persists if you just have this mod and its requirements active.
 -  If not, try adding your other mods until it happens again.
--  Post your error-log using https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib or the standalone https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404]Uploader and command Ctrl+F12
+-  Post your error-log using [HugsLib](https://steamcommunity.com/workshop/filedetails/?id=818773962) or the standalone [Uploader](https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404) and command Ctrl+F12
 -  For best support, please use the Discord-channel for error-reporting.
 -  Do not report errors by making a discussion-thread, I get no notification of that.
 -  If you have the solution for a problem, please post it to the GitHub repository.
--  Use https://github.com/RimSort/RimSort/releases/latest]RimSort to sort your mods
+-  Use [RimSort](https://github.com/RimSort/RimSort/releases/latest) to sort your mods
 
+ 
 
-
-https://steamcommunity.com/sharedfiles/filedetails/changelog/2896093930]![Image](https://img.shields.io/github/v/release/emipa606/MealPrinter?label=latest%20version&style=plastic&color=9f1111&labelColor=black)
-
+[![Image](https://img.shields.io/github/v/release/emipa606/MealPrinter?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/2896093930) | tags:  food production
