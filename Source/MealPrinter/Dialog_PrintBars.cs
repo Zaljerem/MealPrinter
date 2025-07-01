@@ -12,12 +12,12 @@ public class Dialog_PrintBars : Window
 
     private readonly Action<int, bool, bool> confirmAction;
 
-    public readonly int from;
+    private readonly int from;
 
-    public readonly float roundTo;
-    public readonly Func<int, string> textGetter;
+    private readonly float roundTo;
+    private readonly Func<int, string> textGetter;
 
-    public readonly int to;
+    private readonly int to;
 
     private int curValue;
 
@@ -46,14 +46,14 @@ public class Dialog_PrintBars : Window
     {
     }
 
-    public override Vector2 InitialSize => new Vector2(300f, 230f);
+    public override Vector2 InitialSize => new(300f, 230f);
 
     //Defines the layout of the printing window
     public override void DoWindowContents(Rect inRect)
     {
-        var rect = new Rect(inRect.x, inRect.y + 30f, inRect.width, 30f);
-        var forbidCheckbox = new Rect(inRect.x, inRect.y + 90f, inRect.width, 30f);
-        var rearCheckbox = new Rect(inRect.x, inRect.y + 120f, inRect.width, 30f);
+        var rect = new Rect(inRect.x, inRect.y + BotAreaHeight, inRect.width, BotAreaHeight);
+        var forbidCheckbox = new Rect(inRect.x, inRect.y + 90f, inRect.width, BotAreaHeight);
+        var rearCheckbox = new Rect(inRect.x, inRect.y + 120f, inRect.width, BotAreaHeight);
         curValue = (int)Widgets.HorizontalSlider(rect, curValue, from, to, true, textGetter(curValue), null, null,
             roundTo);
         var sepY = inRect.y - 5f;
@@ -63,13 +63,14 @@ public class Dialog_PrintBars : Window
         Widgets.CheckboxLabeled(forbidCheckbox, "PrintForbidden".Translate(), ref forbid);
         Widgets.CheckboxLabeled(rearCheckbox, "PrintRear".Translate(), ref rear);
         Text.Font = GameFont.Small;
-        if (Widgets.ButtonText(new Rect(inRect.x, inRect.yMax - 32f, inRect.width / 2f, 30f),
+        if (Widgets.ButtonText(new Rect(inRect.x, inRect.yMax - 32f, inRect.width / 2f, BotAreaHeight),
                 "CancelButton".Translate()))
         {
             Close();
         }
 
-        if (!Widgets.ButtonText(new Rect(inRect.x + (inRect.width / 2f), inRect.yMax - 32f, inRect.width / 2f, 30f),
+        if (!Widgets.ButtonText(
+                new Rect(inRect.x + (inRect.width / 2f), inRect.yMax - 32f, inRect.width / 2f, BotAreaHeight),
                 "ConfirmPrint".Translate()))
         {
             return;

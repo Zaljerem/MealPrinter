@@ -1,5 +1,8 @@
 # Changelog for MealPrinter
 
+1.6.0 - Mod updated for 1.6 and passed autotests
+
+
 1.5.1 - Basic biotech compatibility with feeding babies, thanks Zaljerem!
 
 

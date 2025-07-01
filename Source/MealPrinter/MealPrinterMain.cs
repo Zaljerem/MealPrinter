@@ -10,7 +10,6 @@ public static class MealPrinterMain
 {
     static MealPrinterMain()
     {
-        Log.Message("[MealPrinter] Okay, showtime!");
         new Harmony("MealPrinter").PatchAll(Assembly.GetExecutingAssembly());
     }
 

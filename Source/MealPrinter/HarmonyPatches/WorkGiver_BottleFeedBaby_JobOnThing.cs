@@ -21,31 +21,26 @@ public static class WorkGiver_BottleFeedBaby_JobOnThing
         var baby = (Pawn)t;
 
         // Look for food, prioritizing multiple sources
-        var foodSource = FindAlternativeBabyFood(pawn, baby);
+        var foodSource = findAlternativeBabyFood(pawn, baby);
 
-        // **Block Meal Printer**
-        if (foodSource is Building_MealPrinter)
+        switch (foodSource)
         {
-            JobFailReason.Is("NoBabyFood".Translate());
-            __result = null;
-            return false;
+            // **Block Meal Printer**
+            case Building_MealPrinter:
+            // Fail if no valid food is found
+            case null:
+                JobFailReason.Is("NoBabyFood".Translate());
+                __result = null;
+                return false;
+            default:
+                // Create the bottle-feeding job with the found food source
+                __result = ChildcareUtility.MakeBottlefeedJob(baby, foodSource);
+                return false; // Skip the original method since we've handled the result
         }
-
-        // Fail if no valid food is found
-        if (foodSource == null)
-        {
-            JobFailReason.Is("NoBabyFood".Translate());
-            __result = null;
-            return false;
-        }
-
-        // Create the bottle-feeding job with the found food source
-        __result = ChildcareUtility.MakeBottlefeedJob(baby, foodSource);
-        return false; // Skip the original method since we've handled the result
     }
 
     // Searches for Baby Food, Insect Jelly, or Milk on the map
-    private static Thing FindAlternativeBabyFood(Pawn pawn, Pawn baby)
+    private static Thing findAlternativeBabyFood(Pawn pawn, Pawn baby)
     {
         var potentialFoods = new List<Thing>();
         if (baby.foodRestriction.BabyFoodAllowed(ThingDefOf.BabyFood))

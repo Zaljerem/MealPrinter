@@ -16,11 +16,11 @@ public static class FoodUtility_BestFoodSourceOnMap
         }
 
         MealPrinterMod.BestFoodSourceOnMap = true;
-        MealPrinterMod.getter = getter;
-        MealPrinterMod.eater = eater;
-        MealPrinterMod.allowDispenserFull = allowDispenserFull;
-        MealPrinterMod.allowForbidden = allowForbidden;
-        MealPrinterMod.allowSociallyImproper = allowSociallyImproper;
+        MealPrinterMod.Getter = getter;
+        MealPrinterMod.Eater = eater;
+        MealPrinterMod.AllowDispenserFull = allowDispenserFull;
+        MealPrinterMod.AllowForbidden = allowForbidden;
+        MealPrinterMod.AllowSociallyImproper = allowSociallyImproper;
     }
 
     private static void Postfix()

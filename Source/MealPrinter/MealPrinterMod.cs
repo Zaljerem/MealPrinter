@@ -6,11 +6,11 @@ namespace MealPrinter;
 
 public class MealPrinterMod : Mod
 {
-    public static bool allowForbidden;
-    public static bool allowDispenserFull;
-    public static Pawn getter;
-    public static Pawn eater;
-    public static bool allowSociallyImproper;
+    public static bool AllowForbidden;
+    public static bool AllowDispenserFull;
+    public static Pawn Getter;
+    public static Pawn Eater;
+    public static bool AllowSociallyImproper;
     public static bool BestFoodSourceOnMap;
 
     private static string currentVersion;
@@ -26,7 +26,7 @@ public class MealPrinterMod : Mod
     {
         var listingStandard = new Listing_Standard();
         listingStandard.Begin(inRect);
-        listingStandard.CheckboxLabeled("PrintSFXLabel".Translate(), ref settings.printSoundEnabled);
+        listingStandard.CheckboxLabeled("PrintSFXLabel".Translate(), ref settings.PrintSoundEnabled);
         if (currentVersion != null)
         {
             listingStandard.Gap();

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: meal printer -->
+  <MealPrinter.label>meal printer</MealPrinter.label>
+  <!-- EN: Meal printers use protein resequencing and primitive molecular printing to convert raw foodstuffs into filling, wholesome meals. They can produce simple meals or fine meals, and can also be configured for high-efficiency nutrient paste or bulk NutriBar production. -->
+  <MealPrinter.description>Meal printers use protein resequencing and primitive molecular printing to convert raw foodstuffs into filling, wholesome meals. They can produce simple meals or fine meals, and can also be configured for high-efficiency nutrient paste or bulk NutriBar production.</MealPrinter.description>
+</LanguageData>

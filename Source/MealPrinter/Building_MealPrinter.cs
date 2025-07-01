@@ -32,7 +32,7 @@ public class Building_MealPrinter : Building_NutrientPasteDispenser
     {
         var text = base.GetInspectString();
         text += "CurrentPrintSetting".Translate(mealToPrint.label);
-        text += "CurrentEfficiency".Translate(GetEfficiency());
+        text += "CurrentEfficiency".Translate(getEfficiency());
         return text;
     }
 
@@ -58,7 +58,7 @@ public class Building_MealPrinter : Building_NutrientPasteDispenser
         yield return new Command_Action
         {
             defaultLabel = "PrintSettingButton".Translate(mealToPrint.label),
-            defaultDesc = GetMealDesc(),
+            defaultDesc = getMealDesc(),
             icon = getMealIcon(),
             Order = -100,
             action = delegate
@@ -70,7 +70,7 @@ public class Building_MealPrinter : Building_NutrientPasteDispenser
                     foreach (var meal in validMeals)
                     {
                         string label = meal.LabelCap;
-                        var option = new FloatMenuOption(label, delegate { SetMealToPrint(meal); });
+                        var option = new FloatMenuOption(label, delegate { setMealToPrint(meal); });
                         options.Add(option);
                     }
                 }
@@ -93,7 +93,7 @@ public class Building_MealPrinter : Building_NutrientPasteDispenser
                     Disabled = true,
                     icon = ContentFinder<Texture2D>.Get("UI/Buttons/NutriBar"),
                     Order = -100,
-                    action = TryBulkPrintBars
+                    action = tryBulkPrintBars
                 };
             }
             else
@@ -104,7 +104,7 @@ public class Building_MealPrinter : Building_NutrientPasteDispenser
                     defaultDesc = "ButtonBulkPrintBarsDesc".Translate(),
                     icon = ContentFinder<Texture2D>.Get("UI/Buttons/NutriBar"),
                     Order = -100,
-                    action = TryBulkPrintBars
+                    action = tryBulkPrintBars
                 };
             }
         }
@@ -117,7 +117,7 @@ public class Building_MealPrinter : Building_NutrientPasteDispenser
                 Disabled = true,
                 icon = ContentFinder<Texture2D>.Get("UI/Buttons/NutriBar"),
                 Order = -100,
-                action = TryBulkPrintBars
+                action = tryBulkPrintBars
             };
         }
     }
@@ -132,7 +132,7 @@ public class Building_MealPrinter : Building_NutrientPasteDispenser
             return null;
         }
 
-        var num = GetNutritionCost();
+        var num = getNutritionCost();
 
         var list = new List<ThingDef>();
         do
@@ -189,7 +189,7 @@ public class Building_MealPrinter : Building_NutrientPasteDispenser
                 num += feedStock.stackCount * feedStock.GetStatValue(StatDefOf.Nutrition);
             }
 
-            if (num >= GetNutritionCost())
+            if (num >= getNutritionCost())
             {
                 return true;
             }
@@ -198,7 +198,7 @@ public class Building_MealPrinter : Building_NutrientPasteDispenser
         return false;
     }
 
-    public List<Thing> GetAllHopperedFeedstock()
+    private List<Thing> getAllHopperedFeedstock()
     {
         var allStock = new List<Thing>();
         for (var i = 0; i < AdjCellsCardinalInBounds.Count; i++)
@@ -223,7 +223,7 @@ public class Building_MealPrinter : Building_NutrientPasteDispenser
     }
 
     //Convert a given list of feedstock stacks into its equivalent in NutriBars
-    public int FeedstockBarEquivalent(List<Thing> feedStocks)
+    private static int feedstockBarEquivalent(List<Thing> feedStocks)
     {
         var num = 0f;
         foreach (var thing in feedStocks)
@@ -235,36 +235,36 @@ public class Building_MealPrinter : Building_NutrientPasteDispenser
     }
 
     //Bulk bar printing gui setup
-    private void TryBulkPrintBars()
+    private void tryBulkPrintBars()
     {
-        var feedStock = GetAllHopperedFeedstock();
+        var feedStock = getAllHopperedFeedstock();
 
-        if (feedStock == null || FeedstockBarEquivalent(GetAllHopperedFeedstock()) <= 0)
+        if (feedStock == null || feedstockBarEquivalent(getAllHopperedFeedstock()) <= 0)
         {
             Messages.Message("CannotBulkPrintBars".Translate(), MessageTypeDefOf.RejectInput, false);
             return;
         }
 
-        var maxPossibleBars = FeedstockBarEquivalent(feedStock);
-        var maxAllowedBars = 30;
+        var maxPossibleBars = feedstockBarEquivalent(feedStock);
+        const int maxAllowedBars = 30;
         if (maxPossibleBars > maxAllowedBars)
         {
             maxPossibleBars = 30;
         }
 
-        var window = new Dialog_PrintBars(TextGetter, 1, maxPossibleBars,
-            delegate(int x, bool forbidden, bool rear) { ConfirmAction(x, feedStock, forbidden, rear); }, 1);
+        var window = new Dialog_PrintBars(textGetter, 1, maxPossibleBars,
+            confirmAction, 1);
         Find.WindowStack.Add(window);
         return;
 
-        string TextGetter(int x)
+        static string textGetter(int x)
         {
             return "SetBarBatchSize".Translate(x, maxAllowedBars);
         }
     }
 
     //Bulk bar printing action
-    public void ConfirmAction(int x, List<Thing> feedStock, bool forbidden, bool rear)
+    private void confirmAction(int x, bool forbidden, bool rear)
     {
         playPrintSound();
 
@@ -288,7 +288,7 @@ public class Building_MealPrinter : Building_NutrientPasteDispenser
                 compIngredients.RegisterIngredient(thingDef);
             }
 
-            GenPlace.TryPlaceThing(bars, rear ? GetRearCell(InteractionCell) : InteractionCell, Map,
+            GenPlace.TryPlaceThing(bars, rear ? getRearCell(InteractionCell) : InteractionCell, Map,
                 ThingPlaceMode.Near);
 
             if (forbidden)
@@ -301,7 +301,7 @@ public class Building_MealPrinter : Building_NutrientPasteDispenser
     }
 
     //Internally define set meal
-    private void SetMealToPrint(ThingDef mealDef)
+    private void setMealToPrint(ThingDef mealDef)
     {
         mealToPrint = mealDef;
     }
@@ -317,7 +317,7 @@ public class Building_MealPrinter : Building_NutrientPasteDispenser
     }
 
     //Get meal desc for gizmo
-    private string GetMealDesc()
+    private string getMealDesc()
     {
         if (mealToPrint == ThingDefOf.MealSimple)
         {
@@ -328,7 +328,7 @@ public class Building_MealPrinter : Building_NutrientPasteDispenser
     }
 
     //Get print efficiency for inspect pane
-    private string GetEfficiency()
+    private string getEfficiency()
     {
         if (mealToPrint == ThingDefOf.MealSimple)
         {
@@ -339,7 +339,7 @@ public class Building_MealPrinter : Building_NutrientPasteDispenser
     }
 
     //Get nutrition cost for each potential meal type
-    private float GetNutritionCost()
+    private float getNutritionCost()
     {
         var num = 0.3f;
         if (mealToPrint.Equals(ThingDefOf.MealNutrientPaste))
@@ -373,13 +373,13 @@ public class Building_MealPrinter : Building_NutrientPasteDispenser
     //Plays print sound according to settings
     private void playPrintSound()
     {
-        if (LoadedModManager.GetMod<MealPrinterMod>().GetSettings<MealPrinterSettings>().printSoundEnabled)
+        if (LoadedModManager.GetMod<MealPrinterMod>().GetSettings<MealPrinterSettings>().PrintSoundEnabled)
         {
             def.building.soundDispense.PlayOneShot(new TargetInfo(Position, Map));
         }
     }
 
-    private IntVec3 GetRearCell(IntVec3 cell)
+    private IntVec3 getRearCell(IntVec3 cell)
     {
         //0 1 2 3
         //facing up right down left

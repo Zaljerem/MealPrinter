@@ -24,21 +24,21 @@ public static class FoodUtility_SpawnedFoodSearchInnerScan
 
     private static bool PrintDel(Building_MealPrinter t)
     {
-        return MealPrinterMod.allowDispenserFull
-               && MealPrinterMod.getter.RaceProps.ToolUser &&
-               MealPrinterMod.getter.health.capacities.CapableOf(PawnCapacityDefOf.Manipulation)
-               && (t.Faction == MealPrinterMod.getter.Faction || t.Faction == MealPrinterMod.getter.HostFaction)
-               && (MealPrinterMod.allowForbidden || !t.IsForbidden(MealPrinterMod.getter))
+        return MealPrinterMod.AllowDispenserFull
+               && MealPrinterMod.Getter.RaceProps.ToolUser &&
+               MealPrinterMod.Getter.health.capacities.CapableOf(PawnCapacityDefOf.Manipulation)
+               && (t.Faction == MealPrinterMod.Getter.Faction || t.Faction == MealPrinterMod.Getter.HostFaction)
+               && (MealPrinterMod.AllowForbidden || !t.IsForbidden(MealPrinterMod.Getter))
                && t.powerComp.PowerOn
                && t.InteractionCell.Standable(t.Map)
-               && MealPrinterMain.IsFoodSourceOnMapSociallyProper(t, MealPrinterMod.getter, MealPrinterMod.eater,
-                   MealPrinterMod.allowSociallyImproper)
-               && !MealPrinterMod.getter.IsWildMan()
-               && t.CanPawnPrint(MealPrinterMod.eater)
-               && !MealPrinterMod.eater.DevelopmentalStage.Baby()
+               && MealPrinterMain.IsFoodSourceOnMapSociallyProper(t, MealPrinterMod.Getter, MealPrinterMod.Eater,
+                   MealPrinterMod.AllowSociallyImproper)
+               && !MealPrinterMod.Getter.IsWildMan()
+               && t.CanPawnPrint(MealPrinterMod.Eater)
+               && !MealPrinterMod.Eater.DevelopmentalStage.Baby()
                && t.HasEnoughFeedstockInHoppers()
-               && MealPrinterMod.getter.Map.reachability.CanReachNonLocal(MealPrinterMod.getter.Position,
+               && MealPrinterMod.Getter.Map.reachability.CanReachNonLocal(MealPrinterMod.Getter.Position,
                    new TargetInfo(t.InteractionCell, t.Map),
-                   PathEndMode.OnCell, TraverseParms.For(MealPrinterMod.getter, Danger.Some));
+                   PathEndMode.OnCell, TraverseParms.For(MealPrinterMod.Getter, Danger.Some));
     }
 }

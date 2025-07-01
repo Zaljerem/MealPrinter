@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: NutriBar -->
+  <MealPrinter_NutriBar.label>NutriBar</MealPrinter_NutriBar.label>
+  <!-- EN: A spacer-tech compromise between neolithic pemmican and industrial packaged survival meals, designed specifically to be mass-produced by meal printers.\n\nNutriBars consist of extensively-resequenced foodstuffs, compacted into a handheld form factor. Lightweight, energy dense and inoffensively flavored, one NutriBar is just as filling as a traditional meal and lasts several seasons without refrigeration. Perfect for emergency stockpiles or caravan trips. -->
+  <MealPrinter_NutriBar.description>A spacer-tech compromise between neolithic pemmican and industrial packaged survival meals, designed specifically to be mass-produced by meal printers.
+
+NutriBars consist of extensively-resequenced foodstuffs, compacted into a handheld form factor. Lightweight, energy dense and inoffensively flavored, one NutriBar is just as filling as a traditional meal and lasts several seasons without refrigeration. Perfect for emergency stockpiles or caravan trips.</MealPrinter_NutriBar.description>
+</LanguageData>

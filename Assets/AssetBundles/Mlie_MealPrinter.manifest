@@ -1,0 +1,32 @@
+ManifestFileVersion: 0
+CRC: 4185411262
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 4f371977aa576ecef0f1a69d03ae6bb5
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: ce3b6d18a872ca8039cd5eb3c4fb7ef5
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 4f371977aa576ecef0f1a69d03ae6bb5
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 83
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Data/Mlie.MealPrinter/Textures/UI/Buttons/Pemmican.png
+- Assets/Data/Mlie.MealPrinter/Textures/UI/Buttons/NutriBar.png
+- Assets/Data/Mlie.MealPrinter/Textures/Things/Building/Production/MealPrinter/MealPrinter_east.png
+- Assets/Data/Mlie.MealPrinter/Textures/Things/Item/Resource/NutriBar/NutriBar_b.png
+- Assets/Data/Mlie.MealPrinter/Textures/Things/Building/Production/MealPrinter/MealPrinter_north.png
+- Assets/Data/Mlie.MealPrinter/Textures/Things/Item/Resource/NutriBar/NutriBar_a.png
+- Assets/Data/Mlie.MealPrinter/Textures/UI/Buttons/MealFine.png
+- Assets/Data/Mlie.MealPrinter/Textures/UI/Buttons/MealNutrientPaste.png
+- Assets/Data/Mlie.MealPrinter/Textures/Things/Building/Production/MealPrinter/MealPrinter_south.png
+- Assets/Data/Mlie.MealPrinter/Textures/UI/Buttons/MealSimple.png
+- Assets/Data/Mlie.MealPrinter/Sounds/printer.ogg
+Dependencies: []

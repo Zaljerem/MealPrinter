@@ -2,7 +2,13 @@
   "Continued": true,
   "CanAdd": "0",
   "CanRemove": "2",
-  "PreviewVersion": "1.5",
+  "PreviewVersion": "1.6",
   "SocialImageSet": true,
-  "SearchTags": " food production"
+  "SearchTags": " food production",
+  "LastXmlCleaning": "2025-07-01T21:06:27.8761647+02:00",
+  "Patches": false,
+  "Defs": true,
+  "Assemblies": true,
+  "LinesOfCode": 33609.0,
+  "LinesOfXML": 8312.0
 }

@@ -35,7 +35,7 @@ public static class JobGiver_Autofeed_TryGiveJob
         // If the food source is a MealPrinter, search for alternative edible sources
         if (food is Building_MealPrinter)
         {
-            food = FindAlternativeBabyFood(pawn, baby);
+            food = findAlternativeBabyFood(pawn, baby);
             if (food == null)
             {
                 __result = null;
@@ -55,7 +55,7 @@ public static class JobGiver_Autofeed_TryGiveJob
     }
 
     // Searches for any edible baby food, insect jelly, or milk in the map
-    private static Thing FindAlternativeBabyFood(Pawn pawn, Pawn baby)
+    private static Thing findAlternativeBabyFood(Pawn pawn, Pawn baby)
     {
         var potentialFoods = new List<Thing>();
         if (baby.foodRestriction.BabyFoodAllowed(ThingDefOf.BabyFood))
