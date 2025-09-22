@@ -9,6 +9,7 @@
   "Patches": false,
   "Defs": true,
   "Assemblies": true,
-  "LinesOfCode": 33609.0,
-  "LinesOfXML": 8312.0
+  "LinesOfCode": 33609,
+  "LinesOfXML": 8312,
+  "CodeBaseSize": 73
 }
