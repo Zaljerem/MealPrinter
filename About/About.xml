@@ -21,6 +21,7 @@
   </modDependencies>
   <loadAfter>
     <li>brrainz.harmony</li>
+    <li>orion.hospitality</li>    
   </loadAfter>
   <description>[img]https://i.imgur.com/buuPQel.png[/img]
 Update of SomewhereOutInSpaces mod
