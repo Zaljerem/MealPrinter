@@ -25,4 +25,9 @@
   <MealPrinterModName>Imprimante de repas</MealPrinterModName>
   <PrintSFXLabel>Activer l'effet sonore de l'impression ?</PrintSFXLabel>
   <MePr.CurrentModVersion>Version installée du module : {0}</MePr.CurrentModVersion>
+  <!--Meal print eff.-->
+  <!--Button text and descriptions-->
+  <!--Inspect Pane Text-->
+  <!--Bulk print bars text-->
+  <!--Settings-->
 </LanguageData>

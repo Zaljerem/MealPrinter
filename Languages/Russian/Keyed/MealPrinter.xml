@@ -25,4 +25,9 @@
   <MealPrinterModName>Принтер для печати блюд</MealPrinterModName>
   <PrintSFXLabel>Включить звуковой эффект печати?</PrintSFXLabel>
   <MePr.CurrentModVersion>Установленная версия мода: {0}</MePr.CurrentModVersion>
+  <!--Meal print eff.-->
+  <!--Button text and descriptions-->
+  <!--Inspect Pane Text-->
+  <!--Bulk print bars text-->
+  <!--Settings-->
 </LanguageData>

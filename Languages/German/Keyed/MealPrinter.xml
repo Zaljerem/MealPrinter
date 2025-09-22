@@ -25,4 +25,9 @@
   <MealPrinterModName>Mahlzeit Drucker</MealPrinterModName>
   <PrintSFXLabel>Geräuscheffekt beim Drucken aktivieren?</PrintSFXLabel>
   <MePr.CurrentModVersion>Installierte Mod-Version: {0}</MePr.CurrentModVersion>
+  <!--Meal print eff.-->
+  <!--Button text and descriptions-->
+  <!--Inspect Pane Text-->
+  <!--Bulk print bars text-->
+  <!--Settings-->
 </LanguageData>

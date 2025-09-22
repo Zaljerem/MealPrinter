@@ -25,4 +25,9 @@
   <MealPrinterModName>膳食打印机</MealPrinterModName>
   <PrintSFXLabel>启用打印的声音效果？</PrintSFXLabel>
   <MePr.CurrentModVersion>已安装的模组版本：{0}</MePr.CurrentModVersion>
+  <!--Meal print eff.-->
+  <!--Button text and descriptions-->
+  <!--Inspect Pane Text-->
+  <!--Bulk print bars text-->
+  <!--Settings-->
 </LanguageData>
